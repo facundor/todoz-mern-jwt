@@ -62,11 +62,27 @@ export default function MaterialTableDemo() {
     fetchData();
   }, []);
 
+  const onRowClick = async (e, todoItem)=> {
+    try {
+      todoItem.done = !todoItem.done;
+      await todoService.update(todoItem);
+      await fetchData();
+    } catch (error) {
+      console.log(error);
+      showAlert("Connection error", "error");
+    }
+  }
+
   return (
     <MaterialTable
       title="My TODO list"
       columns={state.columns}
       data={state.data}
+      options={{
+        search: false,
+        paging: false
+      }}
+      onRowClick={ onRowClick }
       editable={{
         onRowAdd: newData =>
           new Promise(resolve => {

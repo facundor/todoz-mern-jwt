@@ -24,7 +24,6 @@ const AuthState = props => {
     const signIn = async data => {
         try {
             const response = await authService.login(data.email, data.password);
-            console.log(response.data);
             const token = response.data.token;
             localStorage.setItem('token', token);
             tokenAuth(token);
