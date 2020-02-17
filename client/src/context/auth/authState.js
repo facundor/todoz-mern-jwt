@@ -25,7 +25,6 @@ const AuthState = props => {
         try {
             const response = await authService.login(data.email, data.password);
             const token = response.data.token;
-            localStorage.setItem('token', token);
             tokenAuth(token);
 
             dispatch({
@@ -44,7 +43,6 @@ const AuthState = props => {
     }
     
     const signOut = () => {
-        localStorage.removeItem('token');
         tokenAuth(null);
         dispatch({
             type: CLOSE_SESION
