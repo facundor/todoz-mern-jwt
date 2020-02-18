@@ -5,6 +5,8 @@ const handleError = require("./middleware/error");
 const morgan = require("morgan");
 const auth = require("./middleware/auth");
 const cors = require('cors');
+const swaggerUi = require('swagger-ui-express');
+const {swaggerSpecs, swaggerOptions} = require('./swagger');
 
 connectDB();
 
@@ -19,6 +21,9 @@ app.use(cors());
 app.use("/api/users", require("./routes/users"));
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/todoitems", auth(), require("./routes/todoitems"));
+
+// Swagger config
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs, swaggerOptions));
 
 // Error middleware
 app.use(handleError);

@@ -22,6 +22,7 @@ http://localhost
 - [material-table](https://material-table.com) for todo list table
 - [bcryptjs](https://github.com/dcodeIO/bcrypt.js#readme) to hash passwords
 - [morgan](https://github.com/expressjs/morgan#readme) to log http requests
+- [swagger-jsdoc](https://github.com/Surnet/swagger-jsdoc#swagger-jsdoc) and [swagger-ui-express](https://github.com/scottie1984/swagger-ui-express#swagger-ui-express) for Swagger UI documentation ([OpenAPI 3](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md))
 - [Docker](https://www.docker.com/) and [docker-compose](https://docs.docker.com/compose/) for packaging and delivery
 
 # Screenshots

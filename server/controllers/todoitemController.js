@@ -9,7 +9,10 @@ exports.create = async (req, res, next) => {
     todoItem.owner = req.user.id;
     // Save the TodoItem
     todoItem.save();
-    res.json(todoItem);
+    // Removes the owner
+    const todoItemObj = todoItem.toObject();
+    delete todoItemObj.owner;
+    res.json(todoItemObj);
   } catch (error) {
     next(error);
   }
@@ -18,7 +21,7 @@ exports.create = async (req, res, next) => {
 exports.getAll = async (req, res, next) => {
   try {
     // Retrieves all the TodoItem for the current user
-    const todoItems = await TodoItem.find({ owner : req.user.id }).sort({ timestamp: -1}).select("-owner -timestamp");    
+    const todoItems = await TodoItem.find({ owner : req.user.id }).sort({ timestamp: -1}).select("-owner");    
     res.json(todoItems);
   } catch (error) {
     next(error);
@@ -36,7 +39,9 @@ exports.delete = async (req, res, next) => {
       deleted = doc 
     });
     if(deleted) {
-      res.json(deleted)
+      const deletedObj = deleted.toObject();
+      delete deletedObj.owner;
+      res.json(deletedObj)
     } else {
       throw new ErrorHandler(404, "Not found");
     }

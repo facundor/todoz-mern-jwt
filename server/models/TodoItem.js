@@ -1,6 +1,39 @@
 const mongoose = require('mongoose');
 const toJSON = require('../helpers/mongoose');
 
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     BaseTodoItem:
+ *       type: object
+ *       required:
+ *         - description
+ *         - done
+ *       properties:
+ *         description:
+ *           type: string
+ *         done:
+ *           type: boolean
+ * 
+ *     GetTodoItem:
+ *       allOf:
+ *         - $ref: '#/components/schemas/BaseTodoItem'
+ *         - type: object
+ *           required:
+ *             - id
+ *           properties:
+ *             id:
+ *               type: string
+ *             timestamp:
+ *               type: string
+ *               format: date-time
+ * 
+ *     ArrayOfGetTodoItem:
+ *       type: array
+ *       items:
+ *         $ref: '#/components/schemas/GetTodoItem'
+ */
 const TodoItemSchema = mongoose.Schema({
     description: {
         type: String,
