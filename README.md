@@ -39,13 +39,13 @@ Home
 ![Home](https://raw.githubusercontent.com/jbaris/site-images/master/todoz-mern-jwt/todo-list.png)
 
 # Roadmap
-- Improve UI error messages.
-- Improve docker-compose to allow live reload for development.
-- JWT token renew.
-- Improve properties management, based on environments (consider running from docker services).
-- Improve overall UI design.
-- Unit and integration tests.
-- Add Swagger for API documentation.
+- [ ] Improve UI error messages.
+- [ ] Improve docker-compose to allow live reload for development.
+- [x] JWT token renew.
+- [x] Improve properties management, based on environments (consider running from docker services).
+- [ ] Improve overall UI design.
+- [ ] Unit and integration tests.
+- [ ] Add Swagger for API documentation.
 
 # License
 
