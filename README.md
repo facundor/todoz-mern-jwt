@@ -12,8 +12,9 @@ Execute this on a terminal:
 ```
 
 # How to test
-Open in your browser:
-http://localhost
+Open in your browser at:
+- http://localhost : the application
+- http://localhost:5000/api-docs : the server API documentation
 
 # Stack
 - MERN ([MongoDB](https://www.mongodb.com/), [Express](https://expressjs.com/), [ReactJS](https://reactjs.org/), [Node](https://nodejs.org/en/))
@@ -38,6 +39,10 @@ SignUp
 Home
 
 ![Home](https://raw.githubusercontent.com/jbaris/site-images/master/todoz-mern-jwt/todo-list.png)
+
+Server API documentation
+
+![ServerAPI](https://raw.githubusercontent.com/jbaris/site-images/master/todoz-mern-jwt/server-api-doc.png)
 
 # Roadmap
 - [x] JWT token renew.
