@@ -12,7 +12,7 @@ For a release execution:
   cd todoz
   npm run deploy:release
 ```
-For a development execution (hotreload enabled):
+For a development execution (hot-reload enabled):
 ```
   git clone https://github.com/jbaris/todoz-mern-jwt.git todoz
   cd todoz
@@ -21,7 +21,7 @@ For a development execution (hotreload enabled):
 
 # How to test
 Open in your browser at:
-- http://localhost : the application (http://localhost:3000 for development execution, with hotreload)
+- http://localhost : the application (http://localhost:3000 for development execution, with hot-reload)
 - http://localhost:5000/api-docs : the server API documentation
 
 # Stack
