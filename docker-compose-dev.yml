@@ -1,0 +1,20 @@
+# https://finnian.io/blog/rapid-development-with-node-js-and-docker/
+
+version: '3.1'
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.dev
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./client/:/app/
+    depends_on:
+      - server
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./server:/usr/src/app

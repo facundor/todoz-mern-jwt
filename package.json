@@ -1,0 +1,19 @@
+{
+  "name": "todoz",
+  "version": "1.0.0",
+  "description": "Todoz project",
+  "scripts": {
+    "deploy:dev": "docker-compose -f docker-compose.yml -f docker-compose-dev.yml up --build",
+    "deploy:release": "docker-compose up --build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbaris/todoz-mern-jwt.git"
+  },
+  "author": "Juan Ignacio Barisich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbaris/todoz-mern-jwt/issues"
+  },
+  "homepage": "https://github.com/jbaris/todoz-mern-jwt#readme"
+}
