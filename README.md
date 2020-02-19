@@ -52,6 +52,7 @@ Server API documentation
 - [ ] Unit and integration tests.
 - [ ] Improve UI error messages.
 - [ ] Improve overall UI design.
+- [ ] Migrate to TypeScript?
 
 # License
 
