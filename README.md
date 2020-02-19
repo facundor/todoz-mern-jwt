@@ -4,16 +4,22 @@ This is a MERN stack with JWT authentication proof of concept. The idea is to us
 - at the client side, a responsive material-design single-page web application.
 
 # How to run
-Execute this on a terminal:
+For a release execution:
 ```
   git clone https://github.com/jbaris/todoz-mern-jwt.git todoz
   cd todoz
-  sudo docker-compose up
+  npm run deploy:release
+```
+For a development execution (hotreload enabled):
+```
+  git clone https://github.com/jbaris/todoz-mern-jwt.git todoz
+  cd todoz
+  npm run deploy:develop
 ```
 
 # How to test
 Open in your browser at:
-- http://localhost : the application
+- http://localhost : the application (http://localhost:3000 for development execution, with hotreload)
 - http://localhost:5000/api-docs : the server API documentation
 
 # Stack
@@ -48,7 +54,7 @@ Server API documentation
 - [x] JWT token renew.
 - [x] Improve properties management, based on environments (consider running from docker services).
 - [x] Add Swagger for API documentation.
-- [ ] Improve docker-compose to allow live reload for development.
+- [x] Improve docker-compose to allow hotreload for development.
 - [ ] Unit and integration tests.
 - [ ] Improve UI error messages.
 - [ ] Improve overall UI design.
