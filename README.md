@@ -2,6 +2,7 @@
 This is a proof of concept of MERN stack, JWT authentication and Docker delivery, among other things. The idea is to use this stack to achieve:
 - at the server side: a simple, scalable and secure REST API.
 - at the client side: a responsive material-design single-page web application.
+Off course, you can use this as a boilerplate project.
 
 # How to run
 For a release execution:
