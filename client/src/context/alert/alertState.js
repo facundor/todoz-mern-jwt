@@ -1,6 +1,6 @@
 import React, {useReducer} from 'react';
-import alertContext from './alertContext';
-import alertReducer from './alertReducer';
+import AlertContext from './alertContext';
+import AlertReducer from './alertReducer';
 import { SHOW_ALERT, HIDE_ALERT } from '../../types';
 
 const AlertState = props => {
@@ -11,7 +11,7 @@ const AlertState = props => {
         show: false
     }
 
-    const [state, dispatch] = useReducer(alertReducer, initialState);
+    const [state, dispatch] = useReducer(AlertReducer, initialState);
 
     const showAlert = (message, severity) => {
         dispatch({
@@ -32,7 +32,7 @@ const AlertState = props => {
     }
 
     return (
-        <alertContext.Provider
+        <AlertContext.Provider
             value={{
                 message: state.message,
                 severity: state.severity,
@@ -41,7 +41,7 @@ const AlertState = props => {
             }}
         > 
             {props.children }
-        </alertContext.Provider>
+        </AlertContext.Provider>
     )
 }
 

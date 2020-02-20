@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, useLocation } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 import SignIn from "./components/SignIn/SignIn";
 import SignUp from "./components/SignUp/SignUp";
 import Home from "./components/Home/Home";
@@ -17,17 +17,14 @@ function App() {
   return (
     <AlertState>
       <AuthState>
-        <Router>
           <Switch>
             <Route exact path="/" component={SignIn} />
             <PrivateRoute path="/home" component={Home} />
             <Route exact path="/signup" component={SignUp} />
-            {/* No matches, redirect to root */}
             <Route path="*">
               <NoMatch />
             </Route>
           </Switch>
-        </Router>
         <Alert />
       </AuthState>
     </AlertState>
