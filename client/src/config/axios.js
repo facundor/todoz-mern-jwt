@@ -36,7 +36,7 @@ axiosClient.interceptors.response.use(
   },
   function(error) {
     // Token invalid
-    if (401 === error.response.status) {
+    if (error.response && 401 === error.response.status) {
       tokenAuth(null);
       window.location = "/";
     } else {
