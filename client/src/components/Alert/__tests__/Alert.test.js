@@ -1,8 +1,8 @@
 import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import { render } from '@testing-library/react';
-import Alert from './Alert';
-import AlertContext from '../../context/alert/alertContext';
+import Alert from '../Alert';
+import AlertContext from '../../../context/alert/alertContext';
 
 // https://www.polvara.me/posts/mocking-context-with-react-testing-library/
 

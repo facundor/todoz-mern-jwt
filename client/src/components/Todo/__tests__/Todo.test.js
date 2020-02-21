@@ -1,10 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom/extend-expect";
 import { render, act, fireEvent, waitForElement } from "@testing-library/react";
-import Todo from "./Todo";
-import AlertContext from "../../context/alert/alertContext";
+import Todo from "../Todo";
+import AlertContext from "../../../context/alert/alertContext";
 
-jest.mock('../../services/todoService');
+jest.mock('../../../services/todoService');
 
 async function renderTodo() {
   const showAlert = () => {};
