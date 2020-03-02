@@ -61,7 +61,8 @@ Server API documentation
 - [x] Improve properties management, based on environments (consider running from docker services).
 - [x] Add Swagger for API documentation.
 - [x] Improve docker-compose to allow hotreload for development.
-- [ ] Unit and integration tests.
+- [x] Unit and integration tests.
+- [x] Add Github actions for CI.
 - [ ] Improve UI error messages.
 - [ ] Improve overall UI design.
 - [ ] Migrate to TypeScript?
