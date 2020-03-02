@@ -38,13 +38,13 @@ describe("Home component", () => {
     const confirmDeleteButton = getByTitle("Save");
     fireEvent.click(confirmDeleteButton);
 
-    /*
-       TODO
+    /* TODO
     await waitForElementToBeRemoved(() => getByTitle("Save"));
     await waitForElementToBeRemoved(() => queryByText("Services"));
 
     expect(queryByText("Services")).not.toBeInTheDocument();
     expect(queryByText("Controllers")).toBeInTheDocument();
-    expect(queryByText("Backend init")).toBeInTheDocument();*/
+    expect(queryByText("Backend init")).toBeInTheDocument();
+    */
   });
 });

@@ -40,7 +40,10 @@ exports.delete = async (req, res, next) => {
     });
     if(deleted) {
       const deletedObj = deleted.toObject();
+      deletedObj.id = deletedObj._id;
       delete deletedObj.owner;
+      delete deletedObj._id;
+      delete deletedObj.__v;
       res.json(deletedObj)
     } else {
       throw new ErrorHandler(404, "Not found");

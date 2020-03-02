@@ -36,6 +36,7 @@ module.exports.signIn = async (req, res, next) => {
 
     // Check the user is registered
     let user = await User.findOne({ email });
+    
     if (!user) {
       console.log("ERROR: User not exits");
       throw new ErrorHandler(400, "User or password not valid");
@@ -57,7 +58,6 @@ module.exports.signIn = async (req, res, next) => {
 
 module.exports.tokenRenew = async (req, res, next) => {
   try {
-    console.log("req.user.rem:" + req.user.rem);
     // Avoid infinite renews
     if(req.user.rem > 0) {
       generateToken(req.user, res);

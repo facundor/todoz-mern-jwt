@@ -2,8 +2,8 @@ import React from "react";
 import "@testing-library/jest-dom/extend-expect";
 import { MemoryRouter } from "react-router-dom";
 import { render } from "@testing-library/react";
-import PrivateRoute from "./PrivateRoute";
-import AuthContext from "../../context/auth/authContext";
+import PrivateRoute from "../PrivateRoute";
+import AuthContext from "../../../context/auth/authContext";
 
 const message = "Home";
 
