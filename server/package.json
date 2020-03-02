@@ -8,7 +8,8 @@
     "dev": "nodemon index",
     "standard": "standard",
     "standard-fix": "standard --fix",
-    "test": "jest --detectOpenHandles --runInBand --forceExit"
+    "test": "jest --detectOpenHandles --runInBand --forceExit",
+    "test-coverage": "jest --detectOpenHandles --runInBand --forceExit --coverage"
   },
   "keywords": [],
   "author": "",
