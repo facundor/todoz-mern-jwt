@@ -35,6 +35,8 @@ Open in your browser at:
 - [Docker](https://www.docker.com/) and [docker-compose](https://docs.docker.com/compose/) for packaging and delivery
 - [Jest](https://jestjs.io/) and [React Testing Library](https://github.com/testing-library/react-testing-library#readme) for unit tests
 - [moxios](https://github.com/axios/moxios#readme) for http requests mocking
+- [SuperTest](https://github.com/visionmedia/supertest#readme) for http requests testing
+- [mongodb-memory-server](https://github.com/nodkz/mongodb-memory-server#readme) for mongodb database mocking
 
 # Screenshots
 
