@@ -1,0 +1,59 @@
+name: Coverage CI
+
+on: [push]
+
+jobs:
+
+  coverage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        service:
+        - client
+        - server
+    steps:
+    - name: Checkout code for ${{ matrix.service }}
+      uses: actions/checkout@v2
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - run: npm install
+      working-directory: ${{ matrix.service }}
+    - run: npm run test-coverage
+      working-directory: ${{ matrix.service }}
+      env:
+        CI: true
+    - name: Remove node_modules directory for ${{ matrix.service }}
+      run: rm -rf ./${{ matrix.service }}/node_modules  
+    - name: Upload coverage results for ${{ matrix.service }}
+      uses: actions/upload-artifact@master
+      with:
+        name: ${{ matrix.service }}
+        path: ./${{ matrix.service }}/
+
+  coverage-publish:
+    needs: coverage
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download coverage results for client
+      uses: actions/download-artifact@master
+      with:
+        name: client
+        path: ./client/
+    - name: Download coverage results for server
+      uses: actions/download-artifact@master
+      with:
+        name: server
+        path: ./server/
+    - name: List workspace files
+      run: find .
+    - name: Look for coverage reports
+      run: find . -name "*coverage-final.json"
+    - name: Run codecov publish
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: "*coverage-final.json"
+  
