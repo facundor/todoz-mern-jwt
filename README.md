@@ -1,3 +1,4 @@
+[![codecov](https://codecov.io/gh/jbaris/todoz-mern-jwt/branch/master/graph/badge.svg)](https://codecov.io/gh/jbaris/todoz-mern-jwt)
 # Intro
 This is a proof of concept of MERN stack, JWT authentication and Docker delivery, among other things. The idea is to use this stack to achieve:
 - at the server side: a simple, scalable and secure REST API.
