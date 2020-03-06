@@ -66,6 +66,7 @@ Server API documentation
 - [x] Improve docker-compose to allow hotreload for development.
 - [x] Unit and integration tests.
 - [x] Add Github actions for CI.
+- [ ] Add EsLint and standarJS compliance.
 - [ ] Improve UI error messages.
 - [ ] Improve overall UI design.
 - [ ] Migrate to TypeScript?
