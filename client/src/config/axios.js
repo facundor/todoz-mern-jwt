@@ -1,48 +1,48 @@
-import axios from "axios";
-import tokenAuth from "./token";
-import JWTDecode from "jwt-decode";
+import axios from 'axios'
+import tokenAuth from './token'
+import JWTDecode from 'jwt-decode'
 
 const axiosClient = axios.create({
   baseURL: process.env.REACT_APP_API_URL
-});
+})
 
 const renewToken = async () => {
   try {
-    const response = await axiosClient.get("/api/auth");
-    tokenAuth(response.data.token);
+    const response = await axiosClient.get('/api/auth')
+    tokenAuth(response.data.token)
   } catch (error) {
-    console.log(error);
+    console.log(error)
   }
-};
+}
 
-const reqInterceptor = axiosClient.interceptors.request.use(function(config) {
+const reqInterceptor = axiosClient.interceptors.request.use(function (config) {
   // Token renew
-  const token = localStorage.getItem("token");
+  const token = localStorage.getItem('token')
   if (token) {
-    const decoded = JWTDecode(token);
+    const decoded = JWTDecode(token)
     // https://stackoverflow.com/a/45515761/948938
     if (Math.floor(Date.now() / 1000) > decoded.softexp) {
       // https://stackoverflow.com/a/53294310/948938
-      axiosClient.interceptors.request.eject(reqInterceptor);
-      renewToken();
+      axiosClient.interceptors.request.eject(reqInterceptor)
+      renewToken()
     }
   }
-  return config;
-});
+  return config
+})
 
 axiosClient.interceptors.response.use(
-  function(response) {
-    return response;
+  function (response) {
+    return response
   },
-  function(error) {
+  function (error) {
     // Token invalid
-    if (error.response && 401 === error.response.status) {
-      tokenAuth(null);
-      window.location = "/";
+    if (error.response && error.response.status === 401) {
+      tokenAuth(null)
+      window.location = '/'
     } else {
-      return Promise.reject(error);
+      return Promise.reject(error)
     }
   }
-);
+)
 
-export default axiosClient;
+export default axiosClient

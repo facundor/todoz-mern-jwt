@@ -1,7 +1,7 @@
 export const usersService = {
-    create
+  create
 }
 
-function create(user) {
-    console.log("User created mock");
+function create (user) {
+  console.log('User created mock')
 }

@@ -1,4 +1,4 @@
-const swaggerJsdoc = require('swagger-jsdoc');
+const swaggerJsdoc = require('swagger-jsdoc')
 const options = {
   apis: ['./models/*.js', './routes/*.js'],
   basePath: '/',
@@ -9,7 +9,7 @@ const options = {
         bearerAuth: {
           type: 'http',
           scheme: 'bearer',
-          bearerFormat: 'JWT',
+          bearerFormat: 'JWT'
         }
       }
     },
@@ -17,15 +17,15 @@ const options = {
       description: 'The Todoz API',
       swagger: '2.0',
       title: 'Todoz API',
-      version: '1.0.0',
+      version: '1.0.0'
     }
-  },
-};
-const swaggerSpecs = swaggerJsdoc(options);
+  }
+}
+const swaggerSpecs = swaggerJsdoc(options)
 const swaggerOptions = {
   swaggerOptions: {
     defaultModelsExpandDepth: -1
   }
-};
+}
 
-module.exports = {swaggerSpecs, swaggerOptions};
+module.exports = { swaggerSpecs, swaggerOptions }

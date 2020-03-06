@@ -1,11 +1,11 @@
-const express = require('express');
-const router = express.Router();
-const authController = require('../controllers/authController');
-const { check } = require('express-validator');
-const validate = require("../middleware/validation.js");
-const auth = require('../middleware/auth');
+const express = require('express')
+const router = express.Router()
+const authController = require('../controllers/authController')
+const { check } = require('express-validator')
+const validate = require('../middleware/validation.js')
+const auth = require('../middleware/auth')
 
- /**
+/**
  * @swagger
  * components:
  *   schemas:
@@ -30,7 +30,7 @@ const auth = require('../middleware/auth');
  *           type: string
  */
 
- /**
+/**
  * @swagger
  * /api/auth:
  *   post:
@@ -57,12 +57,12 @@ const auth = require('../middleware/auth');
  *       500:
  *         description: Unexpected server error
  */
- router.post('/', 
-    check('email', 'The email is required').isEmail(),
-    check('password', 'The password must contains at least 6 characters').isLength({ min: 6}),
-    validate,
-    authController.signIn
-);
+router.post('/',
+  check('email', 'The email is required').isEmail(),
+  check('password', 'The password must contains at least 6 characters').isLength({ min: 6 }),
+  validate,
+  authController.signIn
+)
 
 /**
  * @swagger
@@ -87,8 +87,8 @@ const auth = require('../middleware/auth');
  *         description: Unexpected server error
  */
 router.get('/',
-    auth(),
-    authController.tokenRenew
-);
+  auth(),
+  authController.tokenRenew
+)
 
-module.exports = router;
+module.exports = router

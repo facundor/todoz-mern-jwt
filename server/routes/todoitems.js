@@ -1,12 +1,12 @@
-const express = require('express');
-const router = express.Router();
-const todoitemController = require('../controllers/todoitemController');
-const { check } = require('express-validator');
-const validate = require("../middleware/validation.js");
+const express = require('express')
+const router = express.Router()
+const todoitemController = require('../controllers/todoitemController')
+const { check } = require('express-validator')
+const validate = require('../middleware/validation.js')
 
 const checks = [
-    check('description', 'The description is required').not().isEmpty(),
-    check('done', 'The done field must be a boolean').optional().isBoolean()
+  check('description', 'The description is required').not().isEmpty(),
+  check('done', 'The done field must be a boolean').optional().isBoolean()
 ]
 
 /**
@@ -25,7 +25,7 @@ const checks = [
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/BaseTodoItem'        
+ *             $ref: '#/components/schemas/BaseTodoItem'
  *     responses:
  *       200:
  *         content:
@@ -35,11 +35,11 @@ const checks = [
  *       500:
  *         description: Unexpected server error
  */
-router.post('/', 
-    checks,
-    validate,
-    todoitemController.create
-);
+router.post('/',
+  checks,
+  validate,
+  todoitemController.create
+)
 
 /**
  * @swagger
@@ -50,7 +50,7 @@ router.post('/',
  *     security:
  *       - bearerAuth: []
  *     produces:
- *       - application/json      
+ *       - application/json
  *     responses:
  *       200:
  *         content:
@@ -61,8 +61,8 @@ router.post('/',
  *         description: Unexpected server error
  */
 router.get('/',
-    todoitemController.getAll
-);
+  todoitemController.getAll
+)
 
 /**
  * @swagger
@@ -93,8 +93,8 @@ router.get('/',
  *         description: Unexpected server error
  */
 router.delete('/:id',
-    todoitemController.delete
-);
+  todoitemController.delete
+)
 
 /**
  * @swagger
@@ -112,7 +112,7 @@ router.delete('/:id',
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/BaseTodoItem'        
+ *             $ref: '#/components/schemas/BaseTodoItem'
  *     responses:
  *       200:
  *         content:
@@ -124,10 +124,10 @@ router.delete('/:id',
  *       500:
  *         description: Unexpected server error
  */
-router.patch('/', 
-    checks,
-    validate,
-    todoitemController.update
-);
+router.patch('/',
+  checks,
+  validate,
+  todoitemController.update
+)
 
-module.exports = router;
+module.exports = router

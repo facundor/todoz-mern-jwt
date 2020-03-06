@@ -8,8 +8,8 @@
     "dev": "nodemon index",
     "standard": "standard",
     "standard-fix": "standard --fix",
-    "test": "jest --detectOpenHandles --forceExit",
-    "test-coverage": "jest  --coverage --detectOpenHandles --forceExit"
+    "test": "standard && jest --detectOpenHandles --forceExit",
+    "test-coverage": "standard && jest  --coverage --detectOpenHandles --forceExit"
   },
   "keywords": [],
   "author": "",
@@ -41,5 +41,10 @@
     "mongodb-memory-server": "^6.2.4",
     "standard": "^14.3.1",
     "supertest": "^4.0.2"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
   }
 }

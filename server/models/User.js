@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const toJSON = require('../helpers/mongoose');
+const mongoose = require('mongoose')
+const toJSON = require('../helpers/mongoose')
 
 /**
  * @swagger
@@ -41,40 +41,40 @@ const toJSON = require('../helpers/mongoose');
  *             timestamp:
  *               type: string
  *               format: date-time
- * 
+ *
  *     ArrayOfGetUser:
  *       type: array
  *       items:
  *         $ref: '#/components/schemas/GetUser'
  */
 const UsersSchema = mongoose.Schema({
-    firstName: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    lastName: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    email: {
-        type: String,
-        required: true,
-        trim: true, 
-        unique: true
-    },
-    password: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    timestamp: {
-        type: Date,
-        default: Date.now()
-    }
-});
+  firstName: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  lastName: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  email: {
+    type: String,
+    required: true,
+    trim: true,
+    unique: true
+  },
+  password: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  timestamp: {
+    type: Date,
+    default: Date.now()
+  }
+})
 
-UsersSchema.options.toJSON = toJSON;
+UsersSchema.options.toJSON = toJSON
 
-module.exports = mongoose.model('User', UsersSchema);
+module.exports = mongoose.model('User', UsersSchema)

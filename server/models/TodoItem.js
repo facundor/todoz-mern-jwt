@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const toJSON = require('../helpers/mongoose');
+const mongoose = require('mongoose')
+const toJSON = require('../helpers/mongoose')
 
 /**
  * @swagger
@@ -15,7 +15,7 @@ const toJSON = require('../helpers/mongoose');
  *           type: string
  *         done:
  *           type: boolean
- * 
+ *
  *     GetTodoItem:
  *       allOf:
  *         - $ref: '#/components/schemas/BaseTodoItem'
@@ -28,33 +28,33 @@ const toJSON = require('../helpers/mongoose');
  *             timestamp:
  *               type: string
  *               format: date-time
- * 
+ *
  *     ArrayOfGetTodoItem:
  *       type: array
  *       items:
  *         $ref: '#/components/schemas/GetTodoItem'
  */
 const TodoItemSchema = mongoose.Schema({
-    description: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    done: {
-        type: Boolean,
-        required: true,
-        default: false
-    },
-    owner: {
-      type: mongoose.Schema.Types.ObjectId, 
-      ref: 'User'
-    },
-    timestamp: {
-        type: Date,
-        default: Date.now()
-    }
-});
+  description: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  done: {
+    type: Boolean,
+    required: true,
+    default: false
+  },
+  owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  },
+  timestamp: {
+    type: Date,
+    default: Date.now()
+  }
+})
 
-TodoItemSchema.options.toJSON = toJSON;
+TodoItemSchema.options.toJSON = toJSON
 
-module.exports = mongoose.model('TodoItem', TodoItemSchema);
+module.exports = mongoose.model('TodoItem', TodoItemSchema)

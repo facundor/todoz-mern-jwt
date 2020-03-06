@@ -1,9 +1,9 @@
 import axiosClient from '../config/axios'
 
 export const usersService = {
-    create
+  create
 }
 
-function create(user) {
-    return axiosClient.post('/api/users', user)
+function create (user) {
+  return axiosClient.post('/api/users', user)
 }

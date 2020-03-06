@@ -1,8 +1,8 @@
-const express = require('express');
-const router = express.Router();
-const userController = require('../controllers/userController');
-const { check } = require('express-validator');
-const validate = require("../middleware/validation.js");
+const express = require('express')
+const router = express.Router()
+const userController = require('../controllers/userController')
+const { check } = require('express-validator')
+const validate = require('../middleware/validation.js')
 
 /**
  * @swagger
@@ -18,7 +18,7 @@ const validate = require("../middleware/validation.js");
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/NewUser'        
+ *             $ref: '#/components/schemas/NewUser'
  *     responses:
  *       200:
  *         description: No results
@@ -27,14 +27,14 @@ const validate = require("../middleware/validation.js");
  *       500:
  *         description: Unexpected server error
  */
-router.post('/', 
-    check('firstName', 'The firstName is required').not().isEmpty(),
-    check('lastName', 'The lastName is required').not().isEmpty(),
-    check('email', 'The email is required').isEmail(),
-    check('password', 'The password must contains at least 6 characters').isLength({ min: 6}),
-    validate,
-    userController.create
-);
+router.post('/',
+  check('firstName', 'The firstName is required').not().isEmpty(),
+  check('lastName', 'The lastName is required').not().isEmpty(),
+  check('email', 'The email is required').isEmail(),
+  check('password', 'The password must contains at least 6 characters').isLength({ min: 6 }),
+  validate,
+  userController.create
+)
 
 /**
  * @swagger
@@ -54,7 +54,7 @@ router.post('/',
  *         description: Unexpected server error
  */
 router.get('/',
-    userController.getAll
-);
+  userController.getAll
+)
 
-module.exports = router;
+module.exports = router
