@@ -67,6 +67,7 @@ Server API documentation
 - [x] Unit and integration tests.
 - [x] Add Github actions for CI.
 - [ ] Add EsLint and standarJS compliance.
+- [ ] Semantic release.
 - [ ] Improve UI error messages.
 - [ ] Improve overall UI design.
 - [ ] Migrate to TypeScript?
