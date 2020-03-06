@@ -40,6 +40,8 @@ Open in your browser at:
 - [moxios](https://github.com/axios/moxios#readme) for http requests mocking
 - [SuperTest](https://github.com/visionmedia/supertest#readme) for http requests testing
 - [mongodb-memory-server](https://github.com/nodkz/mongodb-memory-server#readme) for mongodb database mocking
+- [ESLint](https://eslint.org/) and [standardJS](https://standardjs.com/) for code quality validation.
+- [GitHub Actions](https://github.com/features/actions) for [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html).
 
 # Screenshots
 
@@ -66,7 +68,7 @@ Server API documentation
 - [x] Improve docker-compose to allow hotreload for development.
 - [x] Unit and integration tests.
 - [x] Add Github actions for CI.
-- [ ] Add EsLint and standarJS compliance.
+- [x] Add ESLint and standarJS compliance.
 - [ ] Semantic release.
 - [ ] Improve UI error messages.
 - [ ] Improve overall UI design.
