@@ -40,8 +40,8 @@ Open in your browser at:
 - [moxios](https://github.com/axios/moxios#readme) for http requests mocking
 - [SuperTest](https://github.com/visionmedia/supertest#readme) for http requests testing
 - [mongodb-memory-server](https://github.com/nodkz/mongodb-memory-server#readme) for mongodb database mocking
-- [ESLint](https://eslint.org/) and [standardJS](https://standardjs.com/) for code quality validation.
-- [GitHub Actions](https://github.com/features/actions) for [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html).
+- [ESLint](https://eslint.org/) and [standardJS](https://standardjs.com/) for code quality validation
+- [GitHub Actions](https://github.com/features/actions) for [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html)
 
 # Screenshots
 
