@@ -69,7 +69,7 @@ Server API documentation
 - [x] Unit and integration tests.
 - [x] Add Github actions for CI.
 - [x] Add ESLint and standarJS compliance.
-- [ ] Semantic release.
+- [ ] [Semantic release](https://github.com/semantic-release/semantic-release).
 - [ ] Improve coverage.
 - [ ] Improve UI error messages.
 - [ ] Improve overall UI design.
