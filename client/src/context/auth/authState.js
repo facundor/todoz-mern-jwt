@@ -2,6 +2,7 @@ import React, { useReducer, useContext } from 'react'
 import AuthContext from './authContext'
 import AuthReducer from './authReducer'
 import AlertContext from '../alert/alertContext'
+import PropTypes from 'prop-types'
 
 import {
   CLOSE_SESION,
@@ -59,6 +60,10 @@ const AuthState = props => {
       {props.children}
     </AuthContext.Provider>
   )
+}
+
+AuthState.propTypes = {
+  children: PropTypes.array.isRequired
 }
 
 export default AuthState

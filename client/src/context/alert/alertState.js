@@ -2,6 +2,7 @@ import React, { useReducer } from 'react'
 import AlertContext from './alertContext'
 import AlertReducer from './alertReducer'
 import { SHOW_ALERT, HIDE_ALERT } from '../../types'
+import PropTypes from 'prop-types'
 
 const AlertState = props => {
   const initialState = {
@@ -42,6 +43,10 @@ const AlertState = props => {
       {props.children}
     </AlertContext.Provider>
   )
+}
+
+AlertState.propTypes = {
+  children: PropTypes.element.isRequired
 }
 
 export default AlertState

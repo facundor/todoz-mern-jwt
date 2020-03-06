@@ -17,8 +17,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "standard && react-scripts test",
-    "test-coverage": "standard && react-scripts test --coverage --detectOpenHandles --forceExit",
+    "lint": "eslint .",
+    "test": "react-scripts test",
+    "test-coverage": "react-scripts test --coverage --detectOpenHandles --forceExit",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,12 +42,20 @@
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
     "@types/jest": "^25.1.2",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-standard": "^4.0.1",
     "moxios": "^0.4.0",
     "standard": "^14.3.1"
   },
   "standard": {
     "env": [
-      "jest", "browser"
+      "jest",
+      "browser"
     ]
   }
 }

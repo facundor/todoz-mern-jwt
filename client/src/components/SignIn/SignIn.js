@@ -15,6 +15,7 @@ import Container from '@material-ui/core/Container'
 import AlertContext from '../../context/alert/alertContext'
 import AuthContext from '../../context/auth/authContext'
 import { Link as RouterLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 function Copyright () {
   return (
@@ -49,7 +50,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export default function SignIn (props) {
+const SignIn = function (props) {
   const classes = useStyles()
 
   const [user, saveUser] = useState({
@@ -161,3 +162,9 @@ export default function SignIn (props) {
     </Container>
   )
 }
+
+SignIn.propTypes = {
+  history: PropTypes.object.isRequired
+}
+
+export default SignIn

@@ -21,6 +21,8 @@ jobs:
         node-version: 12.x
     - run: npm install
       working-directory: ${{ matrix.service }}
+    - run: npm run lint
+      working-directory: ${{ matrix.service }}
     - run: npm run test-coverage
       working-directory: ${{ matrix.service }}
       env:

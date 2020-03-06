@@ -16,7 +16,7 @@ describe('SignUp component', () => {
     const { container, getAllByText } = render(
       <MemoryRouter>
         <AlertContext.Provider value={{ showAlert }}>
-          <SignUp />
+          <SignUp history={{}} />
         </AlertContext.Provider>
       </MemoryRouter>
     )
