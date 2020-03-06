@@ -1,6 +1,7 @@
 # Todoz-mern-jwt
-![Client CI](https://github.com/jbaris/todoz-mern-jwt/workflows/Client%20CI/badge.svg)
-![Server CI](https://github.com/jbaris/todoz-mern-jwt/workflows/Server%20CI/badge.svg)
+[![Client CI](https://github.com/jbaris/todoz-mern-jwt/workflows/Client%20CI/badge.svg)](https://github.com/jbaris/todoz-mern-jwt/actions?query=workflow%3A%22Client+CI%22)
+[![Server CI](https://github.com/jbaris/todoz-mern-jwt/workflows/Server%20CI/badge.svg)](https://github.com/jbaris/todoz-mern-jwt/actions?query=workflow%3A%22Server+CI%22)
+
 [![codecov](https://codecov.io/gh/jbaris/todoz-mern-jwt/branch/master/graph/badge.svg)](https://codecov.io/gh/jbaris/todoz-mern-jwt)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
